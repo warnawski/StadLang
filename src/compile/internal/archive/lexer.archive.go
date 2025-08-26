@@ -1,4 +1,4 @@
-package parser
+package archive
 
 const (
 	Keywords   = "Keywords"
@@ -15,7 +15,7 @@ const (
 	Comment = "Comment"
 )
 
-type Token struct {
+type token struct {
 	Type  string
 	Value string
 	Line  int
@@ -240,9 +240,4 @@ func TokenizationV3(code string) []Token {
 		}
 	}
 	return tokenList
-}
-
-func TokenizationV4(code string) []Token {
-
-	return nil
 }
